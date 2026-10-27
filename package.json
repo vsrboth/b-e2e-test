@@ -1,0 +1,23 @@
+{
+  "name": "bosch-e2e",
+  "version": "1.0.0",
+  "private": true,
+  "description": "End-to-end tests for the Bosch RideCare BackOffice (staging)",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:readonly": "playwright test --grep-invert @writes",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0",
+    "@types/node": "^20.0.0",
+    "dotenv": "^16.4.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
